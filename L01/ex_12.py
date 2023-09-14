@@ -19,4 +19,4 @@ def cal(n):
 
 y=float(input('请输入y:'))
 flag=0 if y>0 else 1
-print('%f的立方根为%f'%((-1)**flag*y,(-1)**flag*cal(abs(y))))
+print('%f的立方根约为%f'%(y,(-1)**flag*cal(abs(y))))
