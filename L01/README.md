@@ -38,9 +38,9 @@
 
 ## ex10
 
-![ex10_1](./imgs/ex_10_1.png)
+![ex10](./imgs/ex_10_1.png)
 
-![ex10_2](./imgs/ex_10_2.png)
+![ex10](./imgs/ex_10_2.png)
 
 ## ex11
 
