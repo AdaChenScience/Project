@@ -32,7 +32,7 @@ scrapy框架缺点：
 
 ## ex_07_01~02
 
-数据库使用MySQL Workbench
+数据库使用MySQL Workbench，下题sql语句见对应py文件
 
 ## ex_07_03
 
