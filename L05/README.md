@@ -1,5 +1,19 @@
 # 10.9 作业
 
+## sect_06_7_1
+
+爬取了豆瓣电影top250榜单并保存为csv，结果见 [douban.csv](./douban.csv)
+
+## sect_06_7_2
+
+![sect_06_7_2](./imgs/sect_06_7_2_1.png)
+![sect_06_7_2](./imgs/sect_06_7_2_2.png)
+![sect_06_7_2](./imgs/sect_06_7_2_3.png)
+
+## sect_07_5
+
+已在mysql上完成
+
 ## ex_06_01
 
 ![ex01](./imgs/ex_06_01.png)

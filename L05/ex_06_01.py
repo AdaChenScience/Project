@@ -12,8 +12,8 @@ sql = """
         create table douban(            
         name char(50) not null,
         actor char(100),
-        information char(100),
-        date char(50),
+        label char(100),
+        year char(50),
         star char(10),
         evaluate char(20) ,
         introduction char(100)
@@ -37,14 +37,14 @@ for url in urls:
     selector=etree.HTML(html.text)
     infos=selector.xpath("//ol[@class='grid_view']/li")
     for info in infos:
-        name=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='hd']//a/span[1]/text()")[0]
-        actor=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//p[1]/text()[1]")[0]
-        information=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//p[1]/text()[2]")[0]
-        date=information.split('/')[0]
-        star=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//div/span[2]/text()")[0]
-        evaluate=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//div/span[4]/text()")[0]
+        name=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='hd']//a/span[1]/text()")[0].strip()
+        actor=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//p[1]/text()[1]")[0].strip()
+        information=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//p[1]/text()[2]")[0].strip()
+        date=information.split('/')[0].strip()
+        star=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//div/span[2]/text()")[0].strip()
+        evaluate=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//div/span[4]/text()")[0].strip()
         try:
-            introduction=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//p[2]/span/text()")[0]
+            introduction=info.xpath(".//div[@class='item']//div[@class='info']//div[@class='bd']//p[2]/span/text()")[0].strip()
         except:
             introduction=''
 
@@ -53,8 +53,8 @@ for url in urls:
             insert into douban(
             name,
             actor,
-            information,
-            date,
+            label,
+            year,
             star,
             evaluate,
             introduction
