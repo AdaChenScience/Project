@@ -12,7 +12,7 @@ gray_image = tf.image.rgb_to_grayscale(image)
 plt.imshow(gray_image.numpy().squeeze(), cmap='gray')
 plt.show()
 
-# 放缩灰度图像并显示
+# 缩放灰度图像并显示
 resize_image = tf.image.resize(images=gray_image, size=(56,56))
 plt.imshow(resize_image.numpy().squeeze(), cmap='gray')
 plt.show()

@@ -1,10 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
-
 
 def parse_data():
     data = np.loadtxt('./data/data.csv')
@@ -12,7 +10,6 @@ def parse_data():
     classLabels = data[:, -1]
     dataMat = np.insert(dataMat, 0, 1, axis=1)
     return dataMat, classLabels
-
 
 def loss_funtion(dataMat, classLabels, weights):
     m, n = np.shape(dataMat)
@@ -24,7 +21,6 @@ def loss_funtion(dataMat, classLabels, weights):
         propability = sigmoid(sum_theta_x)
         loss += -classLabels[i, 0] * np.log(propability) - (1 - classLabels[i, 0]) * np.log(1 - propability)
     return loss
-
 
 def grad_descent(dataMatIn, classLabels):
     dataMatrix = np.mat(dataMatIn)  #(m,n)
