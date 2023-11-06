@@ -16,8 +16,9 @@ def naive_bayes():
     bayes = MultinomialNB(alpha=1.0)
     bayes.fit(x_train,y_train)
     y_predict = bayes.predict(x_test)
-    print("测试集的预测结果为：",y_predict)
-    print("模型的预测准确率为：",bayes.score(x_test,y_test))
+    #print("测试集的预测结果为：",y_predict)
+    print("训练集的预测准确率为：",bayes.score(x_train,y_train))
+    print("测试集的预测准确率为：",bayes.score(x_test,y_test))
 
 if __name__ == '__main__':
     naive_bayes()
