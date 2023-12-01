@@ -1,9 +1,7 @@
 # Data Science 2023 Autumn
 
-by 贺云航
+作者：贺云航
 
-相关链接：
+结课作业在L09文件夹中，视频将发送至助教邮箱
 
-1. [ds-2023-autumn](https://github.com/X-lab2017/ds-2023-autumn)
-
-2. [OpenTEA101](https://github.com/Zzzzzhuzhiwei/OpenTEA101)
+课程链接：[ds-2023-autumn](https://github.com/X-lab2017/ds-2023-autumn)
