@@ -1,0 +1,5 @@
+{
+  "title": "图像分类",
+  "file": "resnet50.ms",
+  "label": ["daisy", "dandelion", "roses", "sunflowers", "tulips"]
+}
